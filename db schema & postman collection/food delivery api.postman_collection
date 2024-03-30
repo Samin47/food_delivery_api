@@ -1,0 +1,304 @@
+{
+	"info": {
+		"_postman_id": "88415ffe-212a-4998-91e7-f90cd6193b5b",
+		"name": "food delivery",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "13353786"
+	},
+	"item": [
+		{
+			"name": "store_rider_location.php",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"rider_id\": 4,\r\n    \"lat\": 37.7749,\r\n    \"lng\": -122.4194,\r\n    \"capture_time\": \"2024-03-29 12:03:06\",\r\n    \"service_name\": \"Food Delivery\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost/food_delivery_api/store_rider_location.php"
+			},
+			"response": [
+				{
+					"name": "store_rider_location.php",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"rider_id\": 4,\r\n    \"lat\": 37.7749,\r\n    \"lng\": -122.4194,\r\n    \"capture_time\": \"2024-03-29 12:03:06\",\r\n    \"service_name\": \"Food Delivery\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost/food_delivery_api/store_rider_location.php"
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sat, 30 Mar 2024 11:15:24 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.4.1"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.4.1"
+						},
+						{
+							"key": "Content-Length",
+							"value": "50"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5, max=100"
+						},
+						{
+							"key": "Connection",
+							"value": "Keep-Alive"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=UTF-8"
+						}
+					],
+					"cookie": [],
+					"body": "\n{\"message\":\"Rider location stored successfully\"}"
+				}
+			]
+		},
+		{
+			"name": "find_nearest_rider.php",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost/food_delivery_api/find_nearest_rider.php?restaurant_id=1",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"food_delivery_api",
+						"find_nearest_rider.php"
+					],
+					"query": [
+						{
+							"key": "restaurant_id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "find_nearest_rider.php",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost/food_delivery_api/find_nearest_rider.php?restaurant_id=1",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"food_delivery_api",
+								"find_nearest_rider.php"
+							],
+							"query": [
+								{
+									"key": "restaurant_id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sat, 30 Mar 2024 11:20:01 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.4.1"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.4.1"
+						},
+						{
+							"key": "Content-Length",
+							"value": "105"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5, max=100"
+						},
+						{
+							"key": "Connection",
+							"value": "Keep-Alive"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=UTF-8"
+						}
+					],
+					"cookie": [],
+					"body": "\n{\"message\":\"Rider found\",\"data\":{\"name\":\"Karim\",\"contact_number\":\"019144803954\",\"distance\":\"0.014 km\"}}"
+				}
+			]
+		},
+		{
+			"name": "(validation_test)store_rider_location.php",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"rider_id\": 4,\r\n    \"lat\": 10000,\r\n    \"lng\": -122.4194,\r\n    \"capture_time\": \"2024-03-29 12:03:06\",\r\n    \"service_name\": \"Food Delivery\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost/food_delivery_api/store_rider_location.php"
+			},
+			"response": [
+				{
+					"name": "store_rider_location.php",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"rider_id\": 4,\r\n    \"lat\": 37.7749,\r\n    \"lng\": -122.4194,\r\n    \"service_name\": \"Food Delivery\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost/food_delivery_api/store_rider_location.php"
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sat, 30 Mar 2024 11:22:09 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.4.1"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.4.1"
+						},
+						{
+							"key": "Content-Length",
+							"value": "61"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=UTF-8"
+						}
+					],
+					"cookie": [],
+					"body": "\n{\"message\":\"Bad Request - Invalid or missing capture_time\"}"
+				},
+				{
+					"name": "store_rider_location.php",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"rider_id\": 4,\r\n    \"lat\": 10000,\r\n    \"lng\": -122.4194,\r\n    \"capture_time\": \"2024-03-29 12:03:06\",\r\n    \"service_name\": \"Food Delivery\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost/food_delivery_api/store_rider_location.php"
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sat, 30 Mar 2024 11:25:47 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.4.1"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.4.1"
+						},
+						{
+							"key": "Content-Length",
+							"value": "52"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=UTF-8"
+						}
+					],
+					"cookie": [],
+					"body": "\n{\"message\":\"Bad Request - Invalid or missing lat\"}"
+				}
+			]
+		}
+	]
+}
