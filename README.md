@@ -44,6 +44,7 @@ This repository contains two APIs for a food delivery system:
       Configure the database settings in configurations/db_config.php.
       Ensure that PHP and MySQL are installed on your system.
       Start your local server.
+      Populate necessary table data (riders and restaurants).
       You can now make requests to the API endpoints using tools like Postman.
 ## Dependencies
       PHP >= 7.0
